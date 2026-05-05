@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Instrument Sans", system-ui, sans-serif;
+  
+  /* Brand Core - Navy */
+  --color-navy: #1C3A6E;
+  --color-navy-dk: #122A52;
+  --color-navy-lt: #ECF1FA;
+  
+  /* Brand Accent - Coral */
+  --color-coral: #D45866;
+  --color-coral-dk: #B5404F;
+  --color-coral-lt: #FCEAEC;
+  
+  /* Supporting - Teal */
+  --color-teal: #0C7A7A;
+  --color-teal-lt: #E3F5F5;
+  
+  /* Supporting - Gold */
+  --color-gold: #C4880A;
+  --color-gold-lt: #FEF3DC;
+  
+  /* Semantic */
+  --color-green: #15803D;
+  --color-green-lt: #DCFCE7;
+  
+  /* Neutrals */
+  --color-ink: #18181B;
+  --color-mid: #52525B;
+  --color-soft: #A1A1AA;
+  --color-border: #E4E4E7;
+  --color-bg: #F9F9F7;
+  --color-stone: #F2EFE9;
+  --color-white: #FFFFFF;
+
+  /* Supplemental Palette (from CSV) */
+  --color-light-blue: #adcfd7;
+  --color-mint: #f5f9f1;
+  --color-violet: #ff99fd;
+  --color-lavender: #ba65e2;
+  --color-dusk: #334d84;
+
+  /* Theme Aliases */
+  --color-primary: var(--color-navy);
+  --color-primary-dark: var(--color-navy-dk);
+  --color-primary-light: var(--color-navy-lt);
+  
+  --color-accent: var(--color-coral);
+  --color-accent-dark: var(--color-coral-dk);
+  --color-accent-light: var(--color-coral-lt);
+  
+  --color-secondary: var(--color-teal);
+  
+  --color-cream: var(--color-bg);
+  --color-sand: var(--color-stone);
+  
+  --radius-xl: 1.5rem;
+  --radius-2xl: 3rem;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-ink bg-cream antialiased selection:bg-accent/20;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight text-primary;
+  }
+}
+
+.stripe-bg {
+  background-image: repeating-linear-gradient(135deg, transparent, transparent 60px, rgba(28, 58, 110, 0.03) 60px, rgba(28, 58, 110, 0.03) 61px);
+}
+
+.glass-nav {
+  @apply bg-white/90 backdrop-blur-xl border-b border-navy/5 sticky top-0 z-50;
+}
+
+.benefit-card {
+  @apply bg-white border border-border rounded-[2rem] p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-navy/5 hover:-translate-y-2;
+}
+
+.new-growth-shadow {
+  box-shadow: 0 40px 100px -20px rgba(28, 58, 110, 0.15);
+}

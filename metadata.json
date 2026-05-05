@@ -1,0 +1,13 @@
+{
+  "name": "Farrah Disability Services",
+  "description": "Premium NDIS provider in Preston, Melbourne. Specialising in culturally responsive support coordination, daily living, and community participation.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "NDIS Support Coordination",
+    "Daily Living Support",
+    "Community Participation",
+    "Plan Management"
+  ]
+}
